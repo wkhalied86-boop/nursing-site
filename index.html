@@ -1,0 +1,743 @@
+<!DOCTYPE html><html dir="rtl" lang="ar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>خالد أكاديمي</title><style>*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;background:#0f1f2e;color:#fff;padding:12px}.topbar{display:flex;justify-content:flex-end;position:relative;margin-bottom:8px}.trbtn{display:flex;align-items:center;gap:6px;background:#1e3a52;color:#fff;border:1px solid #2d5475;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer}.lpop{display:none;position:absolute;top:44px;inset-inline-end:0;background:#162b3d;border:1px solid #2d5475;border-radius:12px;padding:6px;z-index:20;min-width:190px}.lpop.open{display:flex;flex-direction:column;gap:4px}.litem{display:flex;align-items:center;gap:8px;background:transparent;color:#fff;border:none;border-radius:8px;padding:8px 10px;text-align:start;cursor:pointer;font-weight:600}.litem:hover{background:#234561}.banner img{width:100%;height:auto;display:block;border-radius:12px;margin-bottom:14px}.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}.tbtn{display:flex;align-items:center;justify-content:center;gap:6px;background:#1e3a52;color:#fff;border:1px solid #2d5475;border-radius:10px;padding:10px 6px;font-weight:700;font-size:12px;text-align:center;cursor:pointer}.tbtn.active{background:#0ea5e9;color:#06131f}.lgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.card{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;background:#1b364d;border:1px solid #2a4f6e;border-radius:12px;padding:14px 10px;color:#fff;gap:6px}.num{width:32px;height:32px;border-radius:50%;background:#2dd4bf;color:#062026;font-weight:800;display:flex;align-items:center;justify-content:center}small{color:#cbd5e1}.hide{display:none!important}</style><style>.langbar{position:sticky;top:0;z-index:9999;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;background:#0a1e3a;padding:8px}.langbar button{font-size:15px;padding:8px 12px;border-radius:20px;border:1px solid #fff;background:#132f55;color:#fff;cursor:pointer}</style></head><body>
+
+<div class="topbar"><button data-lang-btn id="trbtn" class="trbtn" type="button">🌐 <span id="curLang">🇸🇦 العربية</span></button><div id="lpop" class="lpop"><button class="litem" data-lang="ar"><span>🇸🇦</span><span>العربية</span></button>
+<button class="litem" data-lang="en"><span>🇺🇸</span><span>English</span></button>
+<button class="litem" data-lang="fr"><span>🇫🇷</span><span>Français</span></button>
+<button class="litem" data-lang="es"><span>🇪🇸</span><span>Español</span></button>
+<button class="litem" data-lang="de"><span>🇩🇪</span><span>Deutsch</span></button>
+<button class="litem" data-lang="tr"><span>🇹🇷</span><span>Türkçe</span></button>
+<button class="litem" data-lang="ru"><span>🇷🇺</span><span>Русский</span></button>
+<button class="litem" data-lang="it"><span>🇮🇹</span><span>Italiano</span></button>
+<button class="litem" data-lang="pt"><span>🇵🇹</span><span>Português</span></button>
+<button class="litem" data-lang="id"><span>🇮🇩</span><span>Bahasa Indonesia</span></button></div></div><div class="banner"><img src="banner.jpg" alt=""></div><div class="tgrid"><button class="tbtn active" data-t="All"><span class="te">📋</span><span class="tl">All</span></button>
+<button class="tbtn" data-t="أساسيات التمريض"><span class="te">🩺</span><span class="tl">أساسيات التمريض</span></button>
+<button class="tbtn" data-t="العلامات الحيوية والتقييم"><span class="te">📈</span><span class="tl">العلامات الحيوية والتقييم</span></button>
+<button class="tbtn" data-t="الإجراءات التمريضية"><span class="te">💉</span><span class="tl">الإجراءات التمريضية</span></button>
+<button class="tbtn" data-t="الأجهزة والمعدات الطبية"><span class="te">🖥️</span><span class="tl">الأجهزة والمعدات الطبية</span></button>
+<button class="tbtn" data-t="الأدوية والعقاقير"><span class="te">💊</span><span class="tl">الأدوية والعقاقير</span></button>
+<button class="tbtn" data-t="الطوارئ والإسعافات الأولية"><span class="te">🚑</span><span class="tl">الطوارئ والإسعافات الأولية</span></button>
+<button class="tbtn" data-t="العناية المركزة والعمليات"><span class="te">🏥</span><span class="tl">العناية المركزة والعمليات</span></button>
+<button class="tbtn" data-t="التشريح البشري"><span class="te">🦴</span><span class="tl">التشريح البشري</span></button>
+<button class="tbtn" data-t="وظائف الأعضاء والفسيولوجيا"><span class="te">❤️</span><span class="tl">وظائف الأعضاء والفسيولوجيا</span></button>
+<button class="tbtn" data-t="الأمراض المعدية والمناعة"><span class="te">🦠</span><span class="tl">الأمراض المعدية والمناعة</span></button>
+<button class="tbtn" data-t="الأمراض الباطنية"><span class="te">🫁</span><span class="tl">الأمراض الباطنية</span></button>
+<button class="tbtn" data-t="الأشعة والفحوصات التشخيصية"><span class="te">☢️</span><span class="tl">الأشعة والفحوصات التشخيصية</span></button>
+<button class="tbtn" data-t="التحاليل الطبية"><span class="te">🧪</span><span class="tl">التحاليل الطبية</span></button>
+<button class="tbtn" data-t="التخصصات الطبية والجراحية"><span class="te">🩹</span><span class="tl">التخصصات الطبية والجراحية</span></button>
+<button class="tbtn" data-t="تمريض الأطفال وحديثي الولادة"><span class="te">👶</span><span class="tl">تمريض الأطفال وحديثي الولادة</span></button>
+<button class="tbtn" data-t="الصحة النفسية والتأهيل"><span class="te">🧠</span><span class="tl">الصحة النفسية والتأهيل</span></button>
+<button class="tbtn" data-t="الأسنان والعيون والجلدية"><span class="te">👁️</span><span class="tl">الأسنان والعيون والجلدية</span></button>
+<button class="tbtn" data-t="الإدارة والجودة والتكنولوجيا الطبية"><span class="te">📊</span><span class="tl">الإدارة والجودة والتكنولوجيا الطبية</span></button>
+<button class="tbtn" data-t="التغذية والصحة العامة"><span class="te">🥗</span><span class="tl">التغذية والصحة العامة</span></button>
+<button class="tbtn" data-t="صحة الأم والولادة"><span class="te">🤰</span><span class="tl">صحة الأم والولادة</span></button></div><!-- SEARCH -->
+<div style="padding:12px 16px 4px;">
+<input id="qsearch" placeholder="🔍 ابحث في الدروس... اكتب اسم الدرس" style="width:100%;padding:14px 16px;border-radius:14px;border:1px solid #1e3a5f;background:#0f2040;color:#fff;font-size:16px;outline:none;" />
+<div id="qcount" style="color:#9db4d6;font-size:13px;margin-top:6px;padding:0 4px;"></div>
+</div>
+<!-- SEARCH_END -->
+<div class="lgrid"><a class="card" href="lesson.html" data-t="أساسيات التمريض" data-i="1" href="lessons/lesson-1.html"><span class="num">1</span><b class="ctitle">درس 1 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="2" href="lessons/lesson-2.html"><span class="num">2</span><b class="ctitle">درس 2 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="3" href="lessons/lesson-3.html"><span class="num">3</span><b class="ctitle">درس 3 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="4" href="lessons/lesson-4.html"><span class="num">4</span><b class="ctitle">درس 4 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="5" href="lessons/lesson-5.html"><span class="num">5</span><b class="ctitle">درس 5 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="6" href="lessons/lesson-6.html"><span class="num">6</span><b class="ctitle">درس 6 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="7" href="lessons/lesson-7.html"><span class="num">7</span><b class="ctitle">درس 7 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="8" href="lessons/lesson-8.html"><span class="num">8</span><b class="ctitle">درس 8 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="9" href="lessons/lesson-9.html"><span class="num">9</span><b class="ctitle">درس 9 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="10" href="lessons/lesson-10.html"><span class="num">10</span><b class="ctitle">درس 10 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="11" href="lessons/lesson-11.html"><span class="num">11</span><b class="ctitle">درس 11 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="12" href="lessons/lesson-12.html"><span class="num">12</span><b class="ctitle">درس 12 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="13" href="lessons/lesson-13.html"><span class="num">13</span><b class="ctitle">درس 13 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="14" href="lessons/lesson-14.html"><span class="num">14</span><b class="ctitle">درس 14 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="15" href="lessons/lesson-15.html"><span class="num">15</span><b class="ctitle">درس 15 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="16" href="lessons/lesson-16.html"><span class="num">16</span><b class="ctitle">درس 16 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="17" href="lessons/lesson-17.html"><span class="num">17</span><b class="ctitle">درس 17 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="18" href="lessons/lesson-18.html"><span class="num">18</span><b class="ctitle">درس 18 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="19" href="lessons/lesson-19.html"><span class="num">19</span><b class="ctitle">درس 19 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="20" href="lessons/lesson-20.html"><span class="num">20</span><b class="ctitle">درس 20 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="21" href="lessons/lesson-21.html"><span class="num">21</span><b class="ctitle">درس 21 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="22" href="lessons/lesson-22.html"><span class="num">22</span><b class="ctitle">درس 22 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="23" href="lessons/lesson-23.html"><span class="num">23</span><b class="ctitle">درس 23 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="24" href="lessons/lesson-24.html"><span class="num">24</span><b class="ctitle">درس 24 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="25" href="lessons/lesson-25.html"><span class="num">25</span><b class="ctitle">درس 25 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="26" href="lessons/lesson-26.html"><span class="num">26</span><b class="ctitle">درس 26 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="27" href="lessons/lesson-27.html"><span class="num">27</span><b class="ctitle">درس 27 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="28" href="lessons/lesson-28.html"><span class="num">28</span><b class="ctitle">درس 28 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="29" href="lessons/lesson-29.html"><span class="num">29</span><b class="ctitle">درس 29 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="30" href="lessons/lesson-30.html"><span class="num">30</span><b class="ctitle">درس 30 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="31" href="lessons/lesson-31.html"><span class="num">31</span><b class="ctitle">درس 31 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="32" href="lessons/lesson-32.html"><span class="num">32</span><b class="ctitle">درس 32 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="33" href="lessons/lesson-33.html"><span class="num">33</span><b class="ctitle">درس 33 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="34" href="lessons/lesson-34.html"><span class="num">34</span><b class="ctitle">درس 34 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="35" href="lessons/lesson-35.html"><span class="num">35</span><b class="ctitle">درس 35 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="36" href="lessons/lesson-36.html"><span class="num">36</span><b class="ctitle">درس 36 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="37" href="lessons/lesson-37.html"><span class="num">37</span><b class="ctitle">درس 37 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="38" href="lessons/lesson-38.html"><span class="num">38</span><b class="ctitle">درس 38 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="39" href="lessons/lesson-39.html"><span class="num">39</span><b class="ctitle">درس 39 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="40" href="lessons/lesson-40.html"><span class="num">40</span><b class="ctitle">درس 40 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="41" href="lessons/lesson-41.html"><span class="num">41</span><b class="ctitle">درس 41 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="42" href="lessons/lesson-42.html"><span class="num">42</span><b class="ctitle">درس 42 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="43" href="lessons/lesson-43.html"><span class="num">43</span><b class="ctitle">درس 43 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="44" href="lessons/lesson-44.html"><span class="num">44</span><b class="ctitle">درس 44 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="45" href="lessons/lesson-45.html"><span class="num">45</span><b class="ctitle">درس 45 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="46" href="lessons/lesson-46.html"><span class="num">46</span><b class="ctitle">درس 46 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="47" href="lessons/lesson-47.html"><span class="num">47</span><b class="ctitle">درس 47 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="48" href="lessons/lesson-48.html"><span class="num">48</span><b class="ctitle">درس 48 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="49" href="lessons/lesson-49.html"><span class="num">49</span><b class="ctitle">درس 49 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="50" href="lessons/lesson-50.html"><span class="num">50</span><b class="ctitle">درس 50 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="51" href="lessons/lesson-51.html"><span class="num">51</span><b class="ctitle">درس 51 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="52" href="lessons/lesson-52.html"><span class="num">52</span><b class="ctitle">درس 52 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="53" href="lessons/lesson-53.html"><span class="num">53</span><b class="ctitle">درس 53 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="54" href="lessons/lesson-54.html"><span class="num">54</span><b class="ctitle">درس 54 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="55" href="lessons/lesson-55.html"><span class="num">55</span><b class="ctitle">درس 55 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="56" href="lessons/lesson-56.html"><span class="num">56</span><b class="ctitle">درس 56 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="57" href="lessons/lesson-57.html"><span class="num">57</span><b class="ctitle">درس 57 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="58" href="lessons/lesson-58.html"><span class="num">58</span><b class="ctitle">درس 58 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="59" href="lessons/lesson-59.html"><span class="num">59</span><b class="ctitle">درس 59 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="60" href="lessons/lesson-60.html"><span class="num">60</span><b class="ctitle">درس 60 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="61" href="lessons/lesson-61.html"><span class="num">61</span><b class="ctitle">درس 61 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="62" href="lessons/lesson-62.html"><span class="num">62</span><b class="ctitle">درس 62 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="63" href="lessons/lesson-63.html"><span class="num">63</span><b class="ctitle">درس 63 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="64" href="lessons/lesson-64.html"><span class="num">64</span><b class="ctitle">درس 64 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="65" href="lessons/lesson-65.html"><span class="num">65</span><b class="ctitle">درس 65 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="66" href="lessons/lesson-66.html"><span class="num">66</span><b class="ctitle">درس 66 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="67" href="lessons/lesson-67.html"><span class="num">67</span><b class="ctitle">درس 67 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="68" href="lessons/lesson-68.html"><span class="num">68</span><b class="ctitle">درس 68 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="69" href="lessons/lesson-69.html"><span class="num">69</span><b class="ctitle">درس 69 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="70" href="lessons/lesson-70.html"><span class="num">70</span><b class="ctitle">درس 70 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="71" href="lessons/lesson-71.html"><span class="num">71</span><b class="ctitle">درس 71 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="72" href="lessons/lesson-72.html"><span class="num">72</span><b class="ctitle">درس 72 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="73" href="lessons/lesson-73.html"><span class="num">73</span><b class="ctitle">درس 73 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="74" href="lessons/lesson-74.html"><span class="num">74</span><b class="ctitle">درس 74 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="75" href="lessons/lesson-75.html"><span class="num">75</span><b class="ctitle">درس 75 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="76" href="lessons/lesson-76.html"><span class="num">76</span><b class="ctitle">درس 76 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="77" href="lessons/lesson-77.html"><span class="num">77</span><b class="ctitle">درس 77 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="78" href="lessons/lesson-78.html"><span class="num">78</span><b class="ctitle">درس 78 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="79" href="lessons/lesson-79.html"><span class="num">79</span><b class="ctitle">درس 79 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="80" href="lessons/lesson-80.html"><span class="num">80</span><b class="ctitle">درس 80 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="81" href="lessons/lesson-81.html"><span class="num">81</span><b class="ctitle">درس 81 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="82" href="lessons/lesson-82.html"><span class="num">82</span><b class="ctitle">درس 82 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="83" href="lessons/lesson-83.html"><span class="num">83</span><b class="ctitle">درس 83 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="84" href="lessons/lesson-84.html"><span class="num">84</span><b class="ctitle">درس 84 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="85" href="lessons/lesson-85.html"><span class="num">85</span><b class="ctitle">درس 85 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="86" href="lessons/lesson-86.html"><span class="num">86</span><b class="ctitle">درس 86 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="87" href="lessons/lesson-87.html"><span class="num">87</span><b class="ctitle">درس 87 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="88" href="lessons/lesson-88.html"><span class="num">88</span><b class="ctitle">درس 88 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="89" href="lessons/lesson-89.html"><span class="num">89</span><b class="ctitle">درس 89 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="90" href="lessons/lesson-90.html"><span class="num">90</span><b class="ctitle">درس 90 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="91" href="lessons/lesson-91.html"><span class="num">91</span><b class="ctitle">درس 91 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="92" href="lessons/lesson-92.html"><span class="num">92</span><b class="ctitle">درس 92 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="93" href="lessons/lesson-93.html"><span class="num">93</span><b class="ctitle">درس 93 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="94" href="lessons/lesson-94.html"><span class="num">94</span><b class="ctitle">درس 94 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="95" href="lessons/lesson-95.html"><span class="num">95</span><b class="ctitle">درس 95 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="96" href="lessons/lesson-96.html"><span class="num">96</span><b class="ctitle">درس 96 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="97" href="lessons/lesson-97.html"><span class="num">97</span><b class="ctitle">درس 97 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="98" href="lessons/lesson-98.html"><span class="num">98</span><b class="ctitle">درس 98 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="99" href="lessons/lesson-99.html"><span class="num">99</span><b class="ctitle">درس 99 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="100" href="lessons/lesson-100.html"><span class="num">100</span><b class="ctitle">درس 100 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="101" href="lessons/lesson-101.html"><span class="num">101</span><b class="ctitle">درس 101 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="102" href="lessons/lesson-102.html"><span class="num">102</span><b class="ctitle">درس 102 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="103" href="lessons/lesson-103.html"><span class="num">103</span><b class="ctitle">درس 103 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="104" href="lessons/lesson-104.html"><span class="num">104</span><b class="ctitle">درس 104 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="105" href="lessons/lesson-105.html"><span class="num">105</span><b class="ctitle">درس 105 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="106" href="lessons/lesson-106.html"><span class="num">106</span><b class="ctitle">درس 106 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="107" href="lessons/lesson-107.html"><span class="num">107</span><b class="ctitle">درس 107 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="108" href="lessons/lesson-108.html"><span class="num">108</span><b class="ctitle">درس 108 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="109" href="lessons/lesson-109.html"><span class="num">109</span><b class="ctitle">درس 109 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="110" href="lessons/lesson-110.html"><span class="num">110</span><b class="ctitle">درس 110 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="111" href="lessons/lesson-111.html"><span class="num">111</span><b class="ctitle">درس 111 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="112" href="lessons/lesson-112.html"><span class="num">112</span><b class="ctitle">درس 112 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="113" href="lessons/lesson-113.html"><span class="num">113</span><b class="ctitle">درس 113 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="114" href="lessons/lesson-114.html"><span class="num">114</span><b class="ctitle">درس 114 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="115" href="lessons/lesson-115.html"><span class="num">115</span><b class="ctitle">درس 115 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="116" href="lessons/lesson-116.html"><span class="num">116</span><b class="ctitle">درس 116 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="117" href="lessons/lesson-117.html"><span class="num">117</span><b class="ctitle">درس 117 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="118" href="lessons/lesson-118.html"><span class="num">118</span><b class="ctitle">درس 118 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="119" href="lessons/lesson-119.html"><span class="num">119</span><b class="ctitle">درس 119 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="120" href="lessons/lesson-120.html"><span class="num">120</span><b class="ctitle">درس 120 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="121" href="lessons/lesson-121.html"><span class="num">121</span><b class="ctitle">درس 121 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="122" href="lessons/lesson-122.html"><span class="num">122</span><b class="ctitle">درس 122 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="123" href="lessons/lesson-123.html"><span class="num">123</span><b class="ctitle">درس 123 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="124" href="lessons/lesson-124.html"><span class="num">124</span><b class="ctitle">درس 124 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="125" href="lessons/lesson-125.html"><span class="num">125</span><b class="ctitle">درس 125 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="126" href="lessons/lesson-126.html"><span class="num">126</span><b class="ctitle">درس 126 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="127" href="lessons/lesson-127.html"><span class="num">127</span><b class="ctitle">درس 127 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="128" href="lessons/lesson-128.html"><span class="num">128</span><b class="ctitle">درس 128 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="129" href="lessons/lesson-129.html"><span class="num">129</span><b class="ctitle">درس 129 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="130" href="lessons/lesson-130.html"><span class="num">130</span><b class="ctitle">درس 130 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="131" href="lessons/lesson-131.html"><span class="num">131</span><b class="ctitle">درس 131 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="132" href="lessons/lesson-132.html"><span class="num">132</span><b class="ctitle">درس 132 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="133" href="lessons/lesson-133.html"><span class="num">133</span><b class="ctitle">درس 133 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="134" href="lessons/lesson-134.html"><span class="num">134</span><b class="ctitle">درس 134 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="135" href="lessons/lesson-135.html"><span class="num">135</span><b class="ctitle">درس 135 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="136" href="lessons/lesson-136.html"><span class="num">136</span><b class="ctitle">درس 136 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="137" href="lessons/lesson-137.html"><span class="num">137</span><b class="ctitle">درس 137 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="138" href="lessons/lesson-138.html"><span class="num">138</span><b class="ctitle">درس 138 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="139" href="lessons/lesson-139.html"><span class="num">139</span><b class="ctitle">درس 139 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="140" href="lessons/lesson-140.html"><span class="num">140</span><b class="ctitle">درس 140 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="141" href="lessons/lesson-141.html"><span class="num">141</span><b class="ctitle">درس 141 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="142" href="lessons/lesson-142.html"><span class="num">142</span><b class="ctitle">درس 142 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="143" href="lessons/lesson-143.html"><span class="num">143</span><b class="ctitle">درس 143 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="144" href="lessons/lesson-144.html"><span class="num">144</span><b class="ctitle">درس 144 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="145" href="lessons/lesson-145.html"><span class="num">145</span><b class="ctitle">درس 145 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="146" href="lessons/lesson-146.html"><span class="num">146</span><b class="ctitle">درس 146 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="147" href="lessons/lesson-147.html"><span class="num">147</span><b class="ctitle">درس 147 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="148" href="lessons/lesson-148.html"><span class="num">148</span><b class="ctitle">درس 148 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="149" href="lessons/lesson-149.html"><span class="num">149</span><b class="ctitle">درس 149 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="150" href="lessons/lesson-150.html"><span class="num">150</span><b class="ctitle">درس 150 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="151" href="lessons/lesson-151.html"><span class="num">151</span><b class="ctitle">درس 151 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="152" href="lessons/lesson-152.html"><span class="num">152</span><b class="ctitle">درس 152 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="153" href="lessons/lesson-153.html"><span class="num">153</span><b class="ctitle">درس 153 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="154" href="lessons/lesson-154.html"><span class="num">154</span><b class="ctitle">درس 154 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="155" href="lessons/lesson-155.html"><span class="num">155</span><b class="ctitle">درس 155 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="156" href="lessons/lesson-156.html"><span class="num">156</span><b class="ctitle">درس 156 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="157" href="lessons/lesson-157.html"><span class="num">157</span><b class="ctitle">درس 157 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="158" href="lessons/lesson-158.html"><span class="num">158</span><b class="ctitle">درس 158 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="159" href="lessons/lesson-159.html"><span class="num">159</span><b class="ctitle">درس 159 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="160" href="lessons/lesson-160.html"><span class="num">160</span><b class="ctitle">درس 160 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="161" href="lessons/lesson-161.html"><span class="num">161</span><b class="ctitle">درس 161 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="162" href="lessons/lesson-162.html"><span class="num">162</span><b class="ctitle">درس 162 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="163" href="lessons/lesson-163.html"><span class="num">163</span><b class="ctitle">درس 163 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="164" href="lessons/lesson-164.html"><span class="num">164</span><b class="ctitle">درس 164 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="165" href="lessons/lesson-165.html"><span class="num">165</span><b class="ctitle">درس 165 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="166" href="lessons/lesson-166.html"><span class="num">166</span><b class="ctitle">درس 166 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="167" href="lessons/lesson-167.html"><span class="num">167</span><b class="ctitle">درس 167 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="168" href="lessons/lesson-168.html"><span class="num">168</span><b class="ctitle">درس 168 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="169" href="lessons/lesson-169.html"><span class="num">169</span><b class="ctitle">درس 169 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="170" href="lessons/lesson-170.html"><span class="num">170</span><b class="ctitle">درس 170 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="171" href="lessons/lesson-171.html"><span class="num">171</span><b class="ctitle">درس 171 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="172" href="lessons/lesson-172.html"><span class="num">172</span><b class="ctitle">درس 172 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="173" href="lessons/lesson-173.html"><span class="num">173</span><b class="ctitle">درس 173 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="174" href="lessons/lesson-174.html"><span class="num">174</span><b class="ctitle">درس 174 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="175" href="lessons/lesson-175.html"><span class="num">175</span><b class="ctitle">درس 175 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="176" href="lessons/lesson-176.html"><span class="num">176</span><b class="ctitle">درس 176 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="177" href="lessons/lesson-177.html"><span class="num">177</span><b class="ctitle">درس 177 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="178" href="lessons/lesson-178.html"><span class="num">178</span><b class="ctitle">درس 178 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="179" href="lessons/lesson-179.html"><span class="num">179</span><b class="ctitle">درس 179 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="180" href="lessons/lesson-180.html"><span class="num">180</span><b class="ctitle">درس 180 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="181" href="lessons/lesson-181.html"><span class="num">181</span><b class="ctitle">درس 181 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="182" href="lessons/lesson-182.html"><span class="num">182</span><b class="ctitle">درس 182 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="183" href="lessons/lesson-183.html"><span class="num">183</span><b class="ctitle">درس 183 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="184" href="lessons/lesson-184.html"><span class="num">184</span><b class="ctitle">درس 184 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="185" href="lessons/lesson-185.html"><span class="num">185</span><b class="ctitle">درس 185 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="186" href="lessons/lesson-186.html"><span class="num">186</span><b class="ctitle">درس 186 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="187" href="lessons/lesson-187.html"><span class="num">187</span><b class="ctitle">درس 187 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="188" href="lessons/lesson-188.html"><span class="num">188</span><b class="ctitle">درس 188 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="189" href="lessons/lesson-189.html"><span class="num">189</span><b class="ctitle">درس 189 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="190" href="lessons/lesson-190.html"><span class="num">190</span><b class="ctitle">درس 190 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="191" href="lessons/lesson-191.html"><span class="num">191</span><b class="ctitle">درس 191 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="192" href="lessons/lesson-192.html"><span class="num">192</span><b class="ctitle">درس 192 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="193" href="lessons/lesson-193.html"><span class="num">193</span><b class="ctitle">درس 193 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="194" href="lessons/lesson-194.html"><span class="num">194</span><b class="ctitle">درس 194 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="195" href="lessons/lesson-195.html"><span class="num">195</span><b class="ctitle">درس 195 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="196" href="lessons/lesson-196.html"><span class="num">196</span><b class="ctitle">درس 196 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="197" href="lessons/lesson-197.html"><span class="num">197</span><b class="ctitle">درس 197 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="198" href="lessons/lesson-198.html"><span class="num">198</span><b class="ctitle">درس 198 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="199" href="lessons/lesson-199.html"><span class="num">199</span><b class="ctitle">درس 199 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="200" href="lessons/lesson-200.html"><span class="num">200</span><b class="ctitle">درس 200 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="201" href="lessons/lesson-201.html"><span class="num">201</span><b class="ctitle">درس 201 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="202" href="lessons/lesson-202.html"><span class="num">202</span><b class="ctitle">درس 202 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="203" href="lessons/lesson-203.html"><span class="num">203</span><b class="ctitle">درس 203 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="204" href="lessons/lesson-204.html"><span class="num">204</span><b class="ctitle">درس 204 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="205" href="lessons/lesson-205.html"><span class="num">205</span><b class="ctitle">درس 205 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="206" href="lessons/lesson-206.html"><span class="num">206</span><b class="ctitle">درس 206 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="207" href="lessons/lesson-207.html"><span class="num">207</span><b class="ctitle">درس 207 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="208" href="lessons/lesson-208.html"><span class="num">208</span><b class="ctitle">درس 208 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="209" href="lessons/lesson-209.html"><span class="num">209</span><b class="ctitle">درس 209 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="210" href="lessons/lesson-210.html"><span class="num">210</span><b class="ctitle">درس 210 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="211" href="lessons/lesson-211.html"><span class="num">211</span><b class="ctitle">درس 211 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="212" href="lessons/lesson-212.html"><span class="num">212</span><b class="ctitle">درس 212 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="213" href="lessons/lesson-213.html"><span class="num">213</span><b class="ctitle">درس 213 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="214" href="lessons/lesson-214.html"><span class="num">214</span><b class="ctitle">درس 214 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="215" href="lessons/lesson-215.html"><span class="num">215</span><b class="ctitle">درس 215 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="216" href="lessons/lesson-216.html"><span class="num">216</span><b class="ctitle">درس 216 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="217" href="lessons/lesson-217.html"><span class="num">217</span><b class="ctitle">درس 217 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="218" href="lessons/lesson-218.html"><span class="num">218</span><b class="ctitle">درس 218 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="219" href="lessons/lesson-219.html"><span class="num">219</span><b class="ctitle">درس 219 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="220" href="lessons/lesson-220.html"><span class="num">220</span><b class="ctitle">درس 220 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="221" href="lessons/lesson-221.html"><span class="num">221</span><b class="ctitle">درس 221 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="222" href="lessons/lesson-222.html"><span class="num">222</span><b class="ctitle">درس 222 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="223" href="lessons/lesson-223.html"><span class="num">223</span><b class="ctitle">درس 223 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="224" href="lessons/lesson-224.html"><span class="num">224</span><b class="ctitle">درس 224 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="225" href="lessons/lesson-225.html"><span class="num">225</span><b class="ctitle">درس 225 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="226" href="lessons/lesson-226.html"><span class="num">226</span><b class="ctitle">درس 226 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="227" href="lessons/lesson-227.html"><span class="num">227</span><b class="ctitle">درس 227 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="228" href="lessons/lesson-228.html"><span class="num">228</span><b class="ctitle">درس 228 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="229" href="lessons/lesson-229.html"><span class="num">229</span><b class="ctitle">درس 229 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="230" href="lessons/lesson-230.html"><span class="num">230</span><b class="ctitle">درس 230 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="231" href="lessons/lesson-231.html"><span class="num">231</span><b class="ctitle">درس 231 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="232" href="lessons/lesson-232.html"><span class="num">232</span><b class="ctitle">درس 232 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="233" href="lessons/lesson-233.html"><span class="num">233</span><b class="ctitle">درس 233 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="234" href="lessons/lesson-234.html"><span class="num">234</span><b class="ctitle">درس 234 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="235" href="lessons/lesson-235.html"><span class="num">235</span><b class="ctitle">درس 235 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="236" href="lessons/lesson-236.html"><span class="num">236</span><b class="ctitle">درس 236 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="237" href="lessons/lesson-237.html"><span class="num">237</span><b class="ctitle">درس 237 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="238" href="lessons/lesson-238.html"><span class="num">238</span><b class="ctitle">درس 238 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="239" href="lessons/lesson-239.html"><span class="num">239</span><b class="ctitle">درس 239 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="240" href="lessons/lesson-240.html"><span class="num">240</span><b class="ctitle">درس 240 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="241" href="lessons/lesson-241.html"><span class="num">241</span><b class="ctitle">درس 241 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="242" href="lessons/lesson-242.html"><span class="num">242</span><b class="ctitle">درس 242 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="243" href="lessons/lesson-243.html"><span class="num">243</span><b class="ctitle">درس 243 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="244" href="lessons/lesson-244.html"><span class="num">244</span><b class="ctitle">درس 244 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="245" href="lessons/lesson-245.html"><span class="num">245</span><b class="ctitle">درس 245 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="246" href="lessons/lesson-246.html"><span class="num">246</span><b class="ctitle">درس 246 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="247" href="lessons/lesson-247.html"><span class="num">247</span><b class="ctitle">درس 247 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="248" href="lessons/lesson-248.html"><span class="num">248</span><b class="ctitle">درس 248 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="249" href="lessons/lesson-249.html"><span class="num">249</span><b class="ctitle">درس 249 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="250" href="lessons/lesson-250.html"><span class="num">250</span><b class="ctitle">درس 250 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="251" href="lessons/lesson-251.html"><span class="num">251</span><b class="ctitle">درس 251 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="252" href="lessons/lesson-252.html"><span class="num">252</span><b class="ctitle">درس 252 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="253" href="lessons/lesson-253.html"><span class="num">253</span><b class="ctitle">درس 253 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="254" href="lessons/lesson-254.html"><span class="num">254</span><b class="ctitle">درس 254 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="255" href="lessons/lesson-255.html"><span class="num">255</span><b class="ctitle">درس 255 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="256" href="lessons/lesson-256.html"><span class="num">256</span><b class="ctitle">درس 256 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="257" href="lessons/lesson-257.html"><span class="num">257</span><b class="ctitle">درس 257 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="258" href="lessons/lesson-258.html"><span class="num">258</span><b class="ctitle">درس 258 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="259" href="lessons/lesson-259.html"><span class="num">259</span><b class="ctitle">درس 259 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="260" href="lessons/lesson-260.html"><span class="num">260</span><b class="ctitle">درس 260 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="261" href="lessons/lesson-261.html"><span class="num">261</span><b class="ctitle">درس 261 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="262" href="lessons/lesson-262.html"><span class="num">262</span><b class="ctitle">درس 262 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="263" href="lessons/lesson-263.html"><span class="num">263</span><b class="ctitle">درس 263 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="264" href="lessons/lesson-264.html"><span class="num">264</span><b class="ctitle">درس 264 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="265" href="lessons/lesson-265.html"><span class="num">265</span><b class="ctitle">درس 265 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="266" href="lessons/lesson-266.html"><span class="num">266</span><b class="ctitle">درس 266 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="267" href="lessons/lesson-267.html"><span class="num">267</span><b class="ctitle">درس 267 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="268" href="lessons/lesson-268.html"><span class="num">268</span><b class="ctitle">درس 268 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="269" href="lessons/lesson-269.html"><span class="num">269</span><b class="ctitle">درس 269 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="270" href="lessons/lesson-270.html"><span class="num">270</span><b class="ctitle">درس 270 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="271" href="lessons/lesson-271.html"><span class="num">271</span><b class="ctitle">درس 271 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="272" href="lessons/lesson-272.html"><span class="num">272</span><b class="ctitle">درس 272 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="273" href="lessons/lesson-273.html"><span class="num">273</span><b class="ctitle">درس 273 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="274" href="lessons/lesson-274.html"><span class="num">274</span><b class="ctitle">درس 274 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="275" href="lessons/lesson-275.html"><span class="num">275</span><b class="ctitle">درس 275 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="276" href="lessons/lesson-276.html"><span class="num">276</span><b class="ctitle">درس 276 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="277" href="lessons/lesson-277.html"><span class="num">277</span><b class="ctitle">درس 277 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="278" href="lessons/lesson-278.html"><span class="num">278</span><b class="ctitle">درس 278 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="279" href="lessons/lesson-279.html"><span class="num">279</span><b class="ctitle">درس 279 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="280" href="lessons/lesson-280.html"><span class="num">280</span><b class="ctitle">درس 280 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="281" href="lessons/lesson-281.html"><span class="num">281</span><b class="ctitle">درس 281 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="282" href="lessons/lesson-282.html"><span class="num">282</span><b class="ctitle">درس 282 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="283" href="lessons/lesson-283.html"><span class="num">283</span><b class="ctitle">درس 283 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="284" href="lessons/lesson-284.html"><span class="num">284</span><b class="ctitle">درس 284 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="285" href="lessons/lesson-285.html"><span class="num">285</span><b class="ctitle">درس 285 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="286" href="lessons/lesson-286.html"><span class="num">286</span><b class="ctitle">درس 286 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="287" href="lessons/lesson-287.html"><span class="num">287</span><b class="ctitle">درس 287 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="288" href="lessons/lesson-288.html"><span class="num">288</span><b class="ctitle">درس 288 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="289" href="lessons/lesson-289.html"><span class="num">289</span><b class="ctitle">درس 289 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="290" href="lessons/lesson-290.html"><span class="num">290</span><b class="ctitle">درس 290 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="291" href="lessons/lesson-291.html"><span class="num">291</span><b class="ctitle">درس 291 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="292" href="lessons/lesson-292.html"><span class="num">292</span><b class="ctitle">درس 292 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="293" href="lessons/lesson-293.html"><span class="num">293</span><b class="ctitle">درس 293 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="294" href="lessons/lesson-294.html"><span class="num">294</span><b class="ctitle">درس 294 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="295" href="lessons/lesson-295.html"><span class="num">295</span><b class="ctitle">درس 295 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="296" href="lessons/lesson-296.html"><span class="num">296</span><b class="ctitle">درس 296 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="297" href="lessons/lesson-297.html"><span class="num">297</span><b class="ctitle">درس 297 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="298" href="lessons/lesson-298.html"><span class="num">298</span><b class="ctitle">درس 298 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="299" href="lessons/lesson-299.html"><span class="num">299</span><b class="ctitle">درس 299 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="300" href="lessons/lesson-300.html"><span class="num">300</span><b class="ctitle">درس 300 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="301" href="lessons/lesson-301.html"><span class="num">301</span><b class="ctitle">درس 301 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="302" href="lessons/lesson-302.html"><span class="num">302</span><b class="ctitle">درس 302 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="303" href="lessons/lesson-303.html"><span class="num">303</span><b class="ctitle">درس 303 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="304" href="lessons/lesson-304.html"><span class="num">304</span><b class="ctitle">درس 304 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="305" href="lessons/lesson-305.html"><span class="num">305</span><b class="ctitle">درس 305 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="306" href="lessons/lesson-306.html"><span class="num">306</span><b class="ctitle">درس 306 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="307" href="lessons/lesson-307.html"><span class="num">307</span><b class="ctitle">درس 307 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="308" href="lessons/lesson-308.html"><span class="num">308</span><b class="ctitle">درس 308 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="309" href="lessons/lesson-309.html"><span class="num">309</span><b class="ctitle">درس 309 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="310" href="lessons/lesson-310.html"><span class="num">310</span><b class="ctitle">درس 310 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="311" href="lessons/lesson-311.html"><span class="num">311</span><b class="ctitle">درس 311 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="312" href="lessons/lesson-312.html"><span class="num">312</span><b class="ctitle">درس 312 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="313" href="lessons/lesson-313.html"><span class="num">313</span><b class="ctitle">درس 313 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="314" href="lessons/lesson-314.html"><span class="num">314</span><b class="ctitle">درس 314 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="315" href="lessons/lesson-315.html"><span class="num">315</span><b class="ctitle">درس 315 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="316" href="lessons/lesson-316.html"><span class="num">316</span><b class="ctitle">درس 316 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="317" href="lessons/lesson-317.html"><span class="num">317</span><b class="ctitle">درس 317 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="318" href="lessons/lesson-318.html"><span class="num">318</span><b class="ctitle">درس 318 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="319" href="lessons/lesson-319.html"><span class="num">319</span><b class="ctitle">درس 319 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="320" href="lessons/lesson-320.html"><span class="num">320</span><b class="ctitle">درس 320 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="321" href="lessons/lesson-321.html"><span class="num">321</span><b class="ctitle">درس 321 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="322" href="lessons/lesson-322.html"><span class="num">322</span><b class="ctitle">درس 322 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="323" href="lessons/lesson-323.html"><span class="num">323</span><b class="ctitle">درس 323 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="324" href="lessons/lesson-324.html"><span class="num">324</span><b class="ctitle">درس 324 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="325" href="lessons/lesson-325.html"><span class="num">325</span><b class="ctitle">درس 325 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="326" href="lessons/lesson-326.html"><span class="num">326</span><b class="ctitle">درس 326 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="327" href="lessons/lesson-327.html"><span class="num">327</span><b class="ctitle">درس 327 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="328" href="lessons/lesson-328.html"><span class="num">328</span><b class="ctitle">درس 328 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="329" href="lessons/lesson-329.html"><span class="num">329</span><b class="ctitle">درس 329 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="330" href="lessons/lesson-330.html"><span class="num">330</span><b class="ctitle">درس 330 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="331" href="lessons/lesson-331.html"><span class="num">331</span><b class="ctitle">درس 331 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="332" href="lessons/lesson-332.html"><span class="num">332</span><b class="ctitle">درس 332 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="333" href="lessons/lesson-333.html"><span class="num">333</span><b class="ctitle">درس 333 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="334" href="lessons/lesson-334.html"><span class="num">334</span><b class="ctitle">درس 334 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="335" href="lessons/lesson-335.html"><span class="num">335</span><b class="ctitle">درس 335 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="336" href="lessons/lesson-336.html"><span class="num">336</span><b class="ctitle">درس 336 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="337" href="lessons/lesson-337.html"><span class="num">337</span><b class="ctitle">درس 337 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="338" href="lessons/lesson-338.html"><span class="num">338</span><b class="ctitle">درس 338 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="339" href="lessons/lesson-339.html"><span class="num">339</span><b class="ctitle">درس 339 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="340" href="lessons/lesson-340.html"><span class="num">340</span><b class="ctitle">درس 340 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="341" href="lessons/lesson-341.html"><span class="num">341</span><b class="ctitle">درس 341 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="342" href="lessons/lesson-342.html"><span class="num">342</span><b class="ctitle">درس 342 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="343" href="lessons/lesson-343.html"><span class="num">343</span><b class="ctitle">درس 343 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="344" href="lessons/lesson-344.html"><span class="num">344</span><b class="ctitle">درس 344 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="345" href="lessons/lesson-345.html"><span class="num">345</span><b class="ctitle">درس 345 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="346" href="lessons/lesson-346.html"><span class="num">346</span><b class="ctitle">درس 346 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="347" href="lessons/lesson-347.html"><span class="num">347</span><b class="ctitle">درس 347 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="348" href="lessons/lesson-348.html"><span class="num">348</span><b class="ctitle">درس 348 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="349" href="lessons/lesson-349.html"><span class="num">349</span><b class="ctitle">درس 349 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="350" href="lessons/lesson-350.html"><span class="num">350</span><b class="ctitle">درس 350 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="351" href="lessons/lesson-351.html"><span class="num">351</span><b class="ctitle">درس 351 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="352" href="lessons/lesson-352.html"><span class="num">352</span><b class="ctitle">درس 352 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="353" href="lessons/lesson-353.html"><span class="num">353</span><b class="ctitle">درس 353 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="354" href="lessons/lesson-354.html"><span class="num">354</span><b class="ctitle">درس 354 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="355" href="lessons/lesson-355.html"><span class="num">355</span><b class="ctitle">درس 355 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="356" href="lessons/lesson-356.html"><span class="num">356</span><b class="ctitle">درس 356 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="357" href="lessons/lesson-357.html"><span class="num">357</span><b class="ctitle">درس 357 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="358" href="lessons/lesson-358.html"><span class="num">358</span><b class="ctitle">درس 358 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="359" href="lessons/lesson-359.html"><span class="num">359</span><b class="ctitle">درس 359 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="360" href="lessons/lesson-360.html"><span class="num">360</span><b class="ctitle">درس 360 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="361" href="lessons/lesson-361.html"><span class="num">361</span><b class="ctitle">درس 361 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="362" href="lessons/lesson-362.html"><span class="num">362</span><b class="ctitle">درس 362 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="363" href="lessons/lesson-363.html"><span class="num">363</span><b class="ctitle">درس 363 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="364" href="lessons/lesson-364.html"><span class="num">364</span><b class="ctitle">درس 364 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="365" href="lessons/lesson-365.html"><span class="num">365</span><b class="ctitle">درس 365 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="366" href="lessons/lesson-366.html"><span class="num">366</span><b class="ctitle">درس 366 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="367" href="lessons/lesson-367.html"><span class="num">367</span><b class="ctitle">درس 367 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="368" href="lessons/lesson-368.html"><span class="num">368</span><b class="ctitle">درس 368 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="369" href="lessons/lesson-369.html"><span class="num">369</span><b class="ctitle">درس 369 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="370" href="lessons/lesson-370.html"><span class="num">370</span><b class="ctitle">درس 370 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="371" href="lessons/lesson-371.html"><span class="num">371</span><b class="ctitle">درس 371 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="372" href="lessons/lesson-372.html"><span class="num">372</span><b class="ctitle">درس 372 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="373" href="lessons/lesson-373.html"><span class="num">373</span><b class="ctitle">درس 373 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="374" href="lessons/lesson-374.html"><span class="num">374</span><b class="ctitle">درس 374 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="375" href="lessons/lesson-375.html"><span class="num">375</span><b class="ctitle">درس 375 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="376" href="lessons/lesson-376.html"><span class="num">376</span><b class="ctitle">درس 376 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="377" href="lessons/lesson-377.html"><span class="num">377</span><b class="ctitle">درس 377 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="378" href="lessons/lesson-378.html"><span class="num">378</span><b class="ctitle">درس 378 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="379" href="lessons/lesson-379.html"><span class="num">379</span><b class="ctitle">درس 379 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="380" href="lessons/lesson-380.html"><span class="num">380</span><b class="ctitle">درس 380 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="381" href="lessons/lesson-381.html"><span class="num">381</span><b class="ctitle">درس 381 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="382" href="lessons/lesson-382.html"><span class="num">382</span><b class="ctitle">درس 382 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="383" href="lessons/lesson-383.html"><span class="num">383</span><b class="ctitle">درس 383 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="384" href="lessons/lesson-384.html"><span class="num">384</span><b class="ctitle">درس 384 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="385" href="lessons/lesson-385.html"><span class="num">385</span><b class="ctitle">درس 385 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="386" href="lessons/lesson-386.html"><span class="num">386</span><b class="ctitle">درس 386 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="387" href="lessons/lesson-387.html"><span class="num">387</span><b class="ctitle">درس 387 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="388" href="lessons/lesson-388.html"><span class="num">388</span><b class="ctitle">درس 388 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="389" href="lessons/lesson-389.html"><span class="num">389</span><b class="ctitle">درس 389 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="390" href="lessons/lesson-390.html"><span class="num">390</span><b class="ctitle">درس 390 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="391" href="lessons/lesson-391.html"><span class="num">391</span><b class="ctitle">درس 391 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="392" href="lessons/lesson-392.html"><span class="num">392</span><b class="ctitle">درس 392 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="393" href="lessons/lesson-393.html"><span class="num">393</span><b class="ctitle">درس 393 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="394" href="lessons/lesson-394.html"><span class="num">394</span><b class="ctitle">درس 394 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="395" href="lessons/lesson-395.html"><span class="num">395</span><b class="ctitle">درس 395 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="396" href="lessons/lesson-396.html"><span class="num">396</span><b class="ctitle">درس 396 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="397" href="lessons/lesson-397.html"><span class="num">397</span><b class="ctitle">درس 397 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="398" href="lessons/lesson-398.html"><span class="num">398</span><b class="ctitle">درس 398 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="399" href="lessons/lesson-399.html"><span class="num">399</span><b class="ctitle">درس 399 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="400" href="lessons/lesson-400.html"><span class="num">400</span><b class="ctitle">درس 400 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="401" href="lessons/lesson-401.html"><span class="num">401</span><b class="ctitle">درس 401 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="402" href="lessons/lesson-402.html"><span class="num">402</span><b class="ctitle">درس 402 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="403" href="lessons/lesson-403.html"><span class="num">403</span><b class="ctitle">درس 403 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="404" href="lessons/lesson-404.html"><span class="num">404</span><b class="ctitle">درس 404 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="405" href="lessons/lesson-405.html"><span class="num">405</span><b class="ctitle">درس 405 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="406" href="lessons/lesson-406.html"><span class="num">406</span><b class="ctitle">درس 406 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="407" href="lessons/lesson-407.html"><span class="num">407</span><b class="ctitle">درس 407 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="408" href="lessons/lesson-408.html"><span class="num">408</span><b class="ctitle">درس 408 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="409" href="lessons/lesson-409.html"><span class="num">409</span><b class="ctitle">درس 409 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="410" href="lessons/lesson-410.html"><span class="num">410</span><b class="ctitle">درس 410 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="411" href="lessons/lesson-411.html"><span class="num">411</span><b class="ctitle">درس 411 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="412" href="lessons/lesson-412.html"><span class="num">412</span><b class="ctitle">درس 412 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="413" href="lessons/lesson-413.html"><span class="num">413</span><b class="ctitle">درس 413 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="414" href="lessons/lesson-414.html"><span class="num">414</span><b class="ctitle">درس 414 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="415" href="lessons/lesson-415.html"><span class="num">415</span><b class="ctitle">درس 415 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="416" href="lessons/lesson-416.html"><span class="num">416</span><b class="ctitle">درس 416 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="417" href="lessons/lesson-417.html"><span class="num">417</span><b class="ctitle">درس 417 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="418" href="lessons/lesson-418.html"><span class="num">418</span><b class="ctitle">درس 418 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="419" href="lessons/lesson-419.html"><span class="num">419</span><b class="ctitle">درس 419 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="420" href="lessons/lesson-420.html"><span class="num">420</span><b class="ctitle">درس 420 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="421" href="lessons/lesson-421.html"><span class="num">421</span><b class="ctitle">درس 421 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="422" href="lessons/lesson-422.html"><span class="num">422</span><b class="ctitle">درس 422 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="423" href="lessons/lesson-423.html"><span class="num">423</span><b class="ctitle">درس 423 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="424" href="lessons/lesson-424.html"><span class="num">424</span><b class="ctitle">درس 424 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="425" href="lessons/lesson-425.html"><span class="num">425</span><b class="ctitle">درس 425 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="426" href="lessons/lesson-426.html"><span class="num">426</span><b class="ctitle">درس 426 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="427" href="lessons/lesson-427.html"><span class="num">427</span><b class="ctitle">درس 427 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="428" href="lessons/lesson-428.html"><span class="num">428</span><b class="ctitle">درس 428 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="429" href="lessons/lesson-429.html"><span class="num">429</span><b class="ctitle">درس 429 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="430" href="lessons/lesson-430.html"><span class="num">430</span><b class="ctitle">درس 430 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="431" href="lessons/lesson-431.html"><span class="num">431</span><b class="ctitle">درس 431 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="432" href="lessons/lesson-432.html"><span class="num">432</span><b class="ctitle">درس 432 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="433" href="lessons/lesson-433.html"><span class="num">433</span><b class="ctitle">درس 433 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="434" href="lessons/lesson-434.html"><span class="num">434</span><b class="ctitle">درس 434 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="435" href="lessons/lesson-435.html"><span class="num">435</span><b class="ctitle">درس 435 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="436" href="lessons/lesson-436.html"><span class="num">436</span><b class="ctitle">درس 436 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="437" href="lessons/lesson-437.html"><span class="num">437</span><b class="ctitle">درس 437 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="438" href="lessons/lesson-438.html"><span class="num">438</span><b class="ctitle">درس 438 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="439" href="lessons/lesson-439.html"><span class="num">439</span><b class="ctitle">درس 439 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="440" href="lessons/lesson-440.html"><span class="num">440</span><b class="ctitle">درس 440 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="441" href="lessons/lesson-441.html"><span class="num">441</span><b class="ctitle">درس 441 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="442" href="lessons/lesson-442.html"><span class="num">442</span><b class="ctitle">درس 442 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="443" href="lessons/lesson-443.html"><span class="num">443</span><b class="ctitle">درس 443 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="444" href="lessons/lesson-444.html"><span class="num">444</span><b class="ctitle">درس 444 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="445" href="lessons/lesson-445.html"><span class="num">445</span><b class="ctitle">درس 445 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="446" href="lessons/lesson-446.html"><span class="num">446</span><b class="ctitle">درس 446 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="447" href="lessons/lesson-447.html"><span class="num">447</span><b class="ctitle">درس 447 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="448" href="lessons/lesson-448.html"><span class="num">448</span><b class="ctitle">درس 448 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="449" href="lessons/lesson-449.html"><span class="num">449</span><b class="ctitle">درس 449 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="450" href="lessons/lesson-450.html"><span class="num">450</span><b class="ctitle">درس 450 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="451" href="lessons/lesson-451.html"><span class="num">451</span><b class="ctitle">درس 451 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="452" href="lessons/lesson-452.html"><span class="num">452</span><b class="ctitle">درس 452 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="453" href="lessons/lesson-453.html"><span class="num">453</span><b class="ctitle">درس 453 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="454" href="lessons/lesson-454.html"><span class="num">454</span><b class="ctitle">درس 454 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="455" href="lessons/lesson-455.html"><span class="num">455</span><b class="ctitle">درس 455 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="456" href="lessons/lesson-456.html"><span class="num">456</span><b class="ctitle">درس 456 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="457" href="lessons/lesson-457.html"><span class="num">457</span><b class="ctitle">درس 457 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="458" href="lessons/lesson-458.html"><span class="num">458</span><b class="ctitle">درس 458 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="459" href="lessons/lesson-459.html"><span class="num">459</span><b class="ctitle">درس 459 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="460" href="lessons/lesson-460.html"><span class="num">460</span><b class="ctitle">درس 460 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="461" href="lessons/lesson-461.html"><span class="num">461</span><b class="ctitle">درس 461 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="462" href="lessons/lesson-462.html"><span class="num">462</span><b class="ctitle">درس 462 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="463" href="lessons/lesson-463.html"><span class="num">463</span><b class="ctitle">درس 463 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="464" href="lessons/lesson-464.html"><span class="num">464</span><b class="ctitle">درس 464 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="465" href="lessons/lesson-465.html"><span class="num">465</span><b class="ctitle">درس 465 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="466" href="lessons/lesson-466.html"><span class="num">466</span><b class="ctitle">درس 466 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="467" href="lessons/lesson-467.html"><span class="num">467</span><b class="ctitle">درس 467 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="468" href="lessons/lesson-468.html"><span class="num">468</span><b class="ctitle">درس 468 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="469" href="lessons/lesson-469.html"><span class="num">469</span><b class="ctitle">درس 469 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="470" href="lessons/lesson-470.html"><span class="num">470</span><b class="ctitle">درس 470 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="471" href="lessons/lesson-471.html"><span class="num">471</span><b class="ctitle">درس 471 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="472" href="lessons/lesson-472.html"><span class="num">472</span><b class="ctitle">درس 472 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="473" href="lessons/lesson-473.html"><span class="num">473</span><b class="ctitle">درس 473 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="474" href="lessons/lesson-474.html"><span class="num">474</span><b class="ctitle">درس 474 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="475" href="lessons/lesson-475.html"><span class="num">475</span><b class="ctitle">درس 475 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="476" href="lessons/lesson-476.html"><span class="num">476</span><b class="ctitle">درس 476 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="477" href="lessons/lesson-477.html"><span class="num">477</span><b class="ctitle">درس 477 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="478" href="lessons/lesson-478.html"><span class="num">478</span><b class="ctitle">درس 478 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="479" href="lessons/lesson-479.html"><span class="num">479</span><b class="ctitle">درس 479 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="480" href="lessons/lesson-480.html"><span class="num">480</span><b class="ctitle">درس 480 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a>
+<a class="card" data-t="أساسيات التمريض" data-i="481" href="lessons/lesson-481.html"><span class="num">481</span><b class="ctitle">درس 481 - أساسيات التمريض</b><small class="csub">أساسيات التمريض</small></a>
+<a class="card" data-t="العلامات الحيوية والتقييم" data-i="482" href="lessons/lesson-482.html"><span class="num">482</span><b class="ctitle">درس 482 - العلامات الحيوية والتقييم</b><small class="csub">العلامات الحيوية والتقييم</small></a>
+<a class="card" data-t="الإجراءات التمريضية" data-i="483" href="lessons/lesson-483.html"><span class="num">483</span><b class="ctitle">درس 483 - الإجراءات التمريضية</b><small class="csub">الإجراءات التمريضية</small></a>
+<a class="card" data-t="الأجهزة والمعدات الطبية" data-i="484" href="lessons/lesson-484.html"><span class="num">484</span><b class="ctitle">درس 484 - الأجهزة والمعدات الطبية</b><small class="csub">الأجهزة والمعدات الطبية</small></a>
+<a class="card" data-t="الأدوية والعقاقير" data-i="485" href="lessons/lesson-485.html"><span class="num">485</span><b class="ctitle">درس 485 - الأدوية والعقاقير</b><small class="csub">الأدوية والعقاقير</small></a>
+<a class="card" data-t="الطوارئ والإسعافات الأولية" data-i="486" href="lessons/lesson-486.html"><span class="num">486</span><b class="ctitle">درس 486 - الطوارئ والإسعافات الأولية</b><small class="csub">الطوارئ والإسعافات الأولية</small></a>
+<a class="card" data-t="العناية المركزة والعمليات" data-i="487" href="lessons/lesson-487.html"><span class="num">487</span><b class="ctitle">درس 487 - العناية المركزة والعمليات</b><small class="csub">العناية المركزة والعمليات</small></a>
+<a class="card" data-t="التشريح البشري" data-i="488" href="lessons/lesson-488.html"><span class="num">488</span><b class="ctitle">درس 488 - التشريح البشري</b><small class="csub">التشريح البشري</small></a>
+<a class="card" data-t="وظائف الأعضاء والفسيولوجيا" data-i="489" href="lessons/lesson-489.html"><span class="num">489</span><b class="ctitle">درس 489 - وظائف الأعضاء والفسيولوجيا</b><small class="csub">وظائف الأعضاء والفسيولوجيا</small></a>
+<a class="card" data-t="الأمراض المعدية والمناعة" data-i="490" href="lessons/lesson-490.html"><span class="num">490</span><b class="ctitle">درس 490 - الأمراض المعدية والمناعة</b><small class="csub">الأمراض المعدية والمناعة</small></a>
+<a class="card" data-t="الأمراض الباطنية" data-i="491" href="lessons/lesson-491.html"><span class="num">491</span><b class="ctitle">درس 491 - الأمراض الباطنية</b><small class="csub">الأمراض الباطنية</small></a>
+<a class="card" data-t="الأشعة والفحوصات التشخيصية" data-i="492" href="lessons/lesson-492.html"><span class="num">492</span><b class="ctitle">درس 492 - الأشعة والفحوصات التشخيصية</b><small class="csub">الأشعة والفحوصات التشخيصية</small></a>
+<a class="card" data-t="التحاليل الطبية" data-i="493" href="lessons/lesson-493.html"><span class="num">493</span><b class="ctitle">درس 493 - التحاليل الطبية</b><small class="csub">التحاليل الطبية</small></a>
+<a class="card" data-t="التخصصات الطبية والجراحية" data-i="494" href="lessons/lesson-494.html"><span class="num">494</span><b class="ctitle">درس 494 - التخصصات الطبية والجراحية</b><small class="csub">التخصصات الطبية والجراحية</small></a>
+<a class="card" data-t="تمريض الأطفال وحديثي الولادة" data-i="495" href="lessons/lesson-495.html"><span class="num">495</span><b class="ctitle">درس 495 - تمريض الأطفال وحديثي الولادة</b><small class="csub">تمريض الأطفال وحديثي الولادة</small></a>
+<a class="card" data-t="الصحة النفسية والتأهيل" data-i="496" href="lessons/lesson-496.html"><span class="num">496</span><b class="ctitle">درس 496 - الصحة النفسية والتأهيل</b><small class="csub">الصحة النفسية والتأهيل</small></a>
+<a class="card" data-t="الأسنان والعيون والجلدية" data-i="497" href="lessons/lesson-497.html"><span class="num">497</span><b class="ctitle">درس 497 - الأسنان والعيون والجلدية</b><small class="csub">الأسنان والعيون والجلدية</small></a>
+<a class="card" data-t="الإدارة والجودة والتكنولوجيا الطبية" data-i="498" href="lessons/lesson-498.html"><span class="num">498</span><b class="ctitle">درس 498 - الإدارة والجودة والتكنولوجيا الطبية</b><small class="csub">الإدارة والجودة والتكنولوجيا الطبية</small></a>
+<a class="card" data-t="التغذية والصحة العامة" data-i="499" href="lessons/lesson-499.html"><span class="num">499</span><b class="ctitle">درس 499 - التغذية والصحة العامة</b><small class="csub">التغذية والصحة العامة</small></a>
+<a class="card" data-t="صحة الأم والولادة" data-i="500" href="lessons/lesson-500.html"><span class="num">500</span><b class="ctitle">درس 500 - صحة الأم والولادة</b><small class="csub">صحة الأم والولادة</small></a></div><script>
+const L={"ar": ["🇸🇦", "العربية", "rtl", "خالد أكاديمي", "الكل", "درس", "القسم"], "en": ["🇺🇸", "English", "ltr", "Khaled Academy", "All", "Lesson", "Topic"], "fr": ["🇫🇷", "Français", "ltr", "Académie Khaled", "Tout", "Leçon", "Sujet"], "es": ["🇪🇸", "Español", "ltr", "Academia Khaled", "Todo", "Lección", "Tema"], "de": ["🇩🇪", "Deutsch", "ltr", "Khaled Akademie", "Alle", "Lektion", "Thema"], "tr": ["🇹🇷", "Türkçe", "ltr", "Khaled Akademi", "Tümü", "Ders", "Konu"], "ru": ["🇷🇺", "Русский", "ltr", "Академия Халеда", "Все", "Урок", "Тема"], "it": ["🇮🇹", "Italiano", "ltr", "Accademia Khaled", "Tutto", "Lezione", "Argomento"], "pt": ["🇵🇹", "Português", "ltr", "Academia Khaled", "Tudo", "Lição", "Tópico"], "id": ["🇮🇩", "Bahasa Indonesia", "ltr", "Akademi Khaled", "Semua", "Pelajaran", "Topik"]};
+const M={"أساسيات التمريض": {"en": "Nursing Basics", "fr": "Soins de base", "es": "Enfermería básica", "de": "Pflegegrundlagen", "tr": "Temel Hemşirelik", "ru": "Основы ухода", "it": "Infermieristica base", "pt": "Enfermagem básica", "id": "Keperawatan dasar"}, "العلامات الحيوية والتقييم": {"en": "Vital Signs", "fr": "Signes vitaux", "es": "Signos vitales", "de": "Vitalzeichen", "tr": "Yaşam Bulguları", "ru": "Жизненные знаки", "it": "Segni vitali", "pt": "Sinais vitais", "id": "Tanda vital"}, "الإجراءات التمريضية": {"en": "Procedures", "fr": "Procédures", "es": "Procedimientos", "de": "Maßnahmen", "tr": "İşlemler", "ru": "Процедуры", "it": "Procedure", "pt": "Procedimentos", "id": "Prosedur"}, "الأجهزة والمعدات الطبية": {"en": "Medical Devices", "fr": "Équipements", "es": "Equipos médicos", "de": "Medizingeräte", "tr": "Tıbbi Cihazlar", "ru": "Медтехника", "it": "Dispositivi", "pt": "Equipamentos", "id": "Alat medis"}, "الأدوية والعقاقير": {"en": "Medications", "fr": "Médicaments", "es": "Medikamente", "de": "Medikamente", "tr": "İlaçlar", "ru": "Лекарства", "it": "Farmaci", "pt": "Medicamentos", "id": "Obat-obatan"}, "الطوارئ والإسعافات الأولية": {"en": "Emergency & First Aid", "fr": "Urgences", "es": "Emergencias", "de": "Notfallhilfe", "tr": "Acil & İlk Yardım", "ru": "Неотложная", "it": "Emergenze", "pt": "Emergência", "id": "Darurat & P3K"}, "العناية المركزة والعمليات": {"en": "ICU & Surgery", "fr": "Réanimation", "es": "UCI y Cirugía", "de": "Intensiv & OP", "tr": "Yoğun Bakım", "ru": "Реанимация", "it": "Terapia intensiva", "pt": "UTI e Cirurgia", "id": "ICU & Bedah"}, "التشريح البشري": {"en": "Anatomy", "fr": "Anatomie", "es": "Anatomía", "de": "Anatomie", "tr": "Anatomi", "ru": "Анатомия", "it": "Anatomia", "pt": "Anatomia", "id": "Anatomi"}, "وظائف الأعضاء والفسيولوجيا": {"en": "Physiology", "fr": "Physiologie", "es": "Fisiología", "de": "Physiologie", "tr": "Fizyoloji", "ru": "Физиология", "it": "Fisiologia", "pt": "Fisiologia", "id": "Fisiologi"}, "الأمراض المعدية والمناعة": {"en": "Infections & Immunity", "fr": "Infections", "es": "Infecciones", "de": "Infektionen", "tr": "Enfeksiyonlar", "ru": "Инфекции", "it": "Infezioni", "pt": "Infecções", "id": "Infeksi & Imun"}, "الأمراض الباطنية": {"en": "Internal Medicine", "fr": "Médecine interne", "es": "Medicina interna", "de": "Innere Medizin", "tr": "İç Hastalıkları", "ru": "Терапия", "it": "Medicina interna", "pt": "Clínica médica", "id": "Penyakit dalam"}, "الأشعة والفحوصات التشخيصية": {"en": "Radiology & Scans", "fr": "Radiologie", "es": "Radiología", "de": "Radiologie", "tr": "Radyoloji", "ru": "Диагностика", "it": "Radiologia", "pt": "Radiologia", "id": "Radiologi"}, "التحاليل الطبية": {"en": "Lab Tests", "fr": "Analyses labo", "es": "Análisis clínicos", "de": "Laborwerte", "tr": "Tahliller", "ru": "Анализы", "it": "Analisi lab", "pt": "Exames lab", "id": "Tes lab"}, "التخصصات الطبية والجراحية": {"en": "Medical & Surgical", "fr": "Médico-chirurgical", "es": "Especialidades", "de": "Fachbereiche", "tr": "Cerrahi & Tıbbi", "ru": "Хирургия", "it": "Specialità", "pt": "Especialidades", "id": "Medis & Bedah"}, "تمريض الأطفال وحديثي الولادة": {"en": "Pediatrics", "fr": "Pédiatrie", "es": "Pediatría", "de": "Pädiatrie", "tr": "Çocuk Sağlığı", "ru": "Педиатрия", "it": "Pediatria", "pt": "Pediatria", "id": "Pediatri"}, "الصحة النفسية والتأهيل": {"en": "Mental Health", "fr": "Santé mentale", "es": "Salud mental", "de": "Psychische Hilfe", "tr": "Ruh Sağlığı", "ru": "Психиатрия", "it": "Salute mentale", "pt": "Saúde mental", "id": "Kesehatan mental"}, "الأسنان والعيون والجلدية": {"en": "Dental, Eye & Skin", "fr": "Dentaire, Yeux, Peau", "es": "Dental, Ojos, Piel", "de": "Zahn, Auge, Haut", "tr": "Diş, Göz, Cilt", "ru": "Глаза, кожа, зубы", "it": "Denti, Occhi, Pelle", "pt": "Odonto, Olhos, Pele", "id": "Gigi, Mata, Kulit"}, "الإدارة والجودة والتكنولوجيا الطبية": {"en": "Management & Tech", "fr": "Gestion & Tech", "es": "Gestión y Tech", "de": "Management & Tech", "tr": "Yönetim & Teknoloji", "ru": "Менеджмент", "it": "Gestione & Tech", "pt": "Gestão e Tech", "id": "Manajemen & Tech"}, "التغذية والصحة العامة": {"en": "Nutrition & Health", "fr": "Nutrition & Santé", "es": "Nutrición y Salud", "de": "Ernährung", "tr": "Beslenme & Sağlık", "ru": "Питание", "it": "Nutrizione", "pt": "Nutrição e Saúde", "id": "Gizi & Kesehatan"}, "صحة الأم والولادة": {"en": "Maternal Health", "fr": "Maternité", "es": "Maternidad", "de": "Geburtshilfe", "tr": "Anne & Doğum", "ru": "Материнство", "it": "Maternità", "pt": "Maternidade", "id": "Kesehatan ibu"}};
+function trN(n,c){return(c==="ar"!M[n]!M[n][c])?n:M[n][c];}
+function applyLang(c){
+  var d=L[c]||L.ar;
+  document.documentElement.lang=c;
+  document.documentElement.dir=d[2];
+  document.title=d[3];
+  var cl=document.getElementById("curLang");
+  if(cl)cl.textContent=d[0]+" "+d[1];
+  var bs=document.querySelectorAll(".tbtn");
+  for(var k=0;k<bs.length;k++){
+    var raw=bs[k].getAttribute("data-t");
+    var sp=bs[k].querySelector(".tl");
+    if(sp)sp.textContent=(raw==="All")?d[4]:trN(raw,c);
+  }
+  var cs=document.querySelectorAll(".card");
+  for(var j=0;j<cs.length;j++){
+    var idx=cs[j].getAttribute("data-i");
+    var rt=cs[j].getAttribute("data-t");
+    var tt=trN(rt,c);
+    var ct=cs[j].querySelector(".ctitle");
+    var sub=cs[j].querySelector(".csub");
+    if(ct)ct.textContent=d[5]+" "+idx+" - "+tt;
+    if(sub)sub.textContent=d[6]+": "+tt;
+  }
+  try{localStorage.setItem("ka_lang",c);}catch(e){}
+}
+var pop=document.getElementById("lpop"),tbtn=document.getElementById("trbtn");
+if(tbtn&&pop){
+  tbtn.onclick=function(ev){ev.stopPropagation();pop.classList.toggle("open");};
+  document.onclick=function(){pop.classList.remove("open");};
+}
+var items=document.querySelectorAll(".litem");
+for(var a=0;a<items.length;a++){
+  items[a].onclick=function(){applyLang(this.getAttribute("data-lang"));if(pop)pop.classList.remove("open");};
+}
+var tbtns=document.querySelectorAll(".tbtn"),cards=document.querySelectorAll(".card");
+for(var m=0;m<tbtns.length;m++){
+  tbtns[m].onclick=function(){
+    for(var x=0;x<tbtns.length;x++)tbtns[x].classList.remove("active");
+    this.classList.add("active");
+    var sel=this.getAttribute("data-t");
+    for(var y=0;y<cards.length;y++){
+      var hide=(sel!=="All"&&cards[y].getAttribute("data-t")!==sel);
+      cards[y].classList.toggle("hide",hide);
+    }
+  };
+}
+var cur="ar";
+try{cur=localStorage.getItem("ka_lang")||"ar";}catch(e){}
+applyLang(cur);
+</script><script id="filterFix">
+(function(){
+  function runFilter(btn){
+    var allBtns = document.querySelectorAll('.tbtn');
+    var cards = document.querySelectorAll('.card');
+    var raw = btn.getAttribute('data-t') || '';
+    allBtns.forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    var isAll = (raw === 'All'  raw === 'الكل'  btn.dataset.all === '1');
+    cards.forEach(function(c){
+      var ct = c.getAttribute('data-t') || '';
+      var show = isAll || (ct === raw);
+      c.style.setProperty('display', show ? '' : 'none', 'important');
+    });
+  }
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest ? e.target.closest('.tbtn') : null;
+    if(!btn){
+      var el = e.target;
+      while(el && el !== document){
+        if(el.classList && el.classList.contains('tbtn')){ btn = el; break; }
+        el = el.parentElement;
+      }
+    }
+    if(btn){ runFilter(btn); }
+  }, true);
+})();
+</script>
+<div id="google_translate_element" style="display:none"></div>
+<style>
+.lang-wrap{position:relative;display:inline-block}
+.lang-menu{display:none;position:absolute;top:110%;left:0;z-index:99999;background:#0a1e3a;border:1px solid gold;border-radius:12px;padding:8px;min-width:190px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.lang-menu.open{display:block}
+.lang-menu button{display:flex;gap:8px;align-items:center;width:100%;text-align:right;background:#132f55;color:#fff;border:1px solid #2a4a7a;padding:10px 12px;margin:4px 0;border-radius:10px;font-size:16px;cursor:pointer}
+.lang-menu button:hover{background:gold;color:#000}
+</style>
+<script>
+function doTranslate(lang){
+  var v = lang==='ar' ? '/auto/ar' : '/auto/'+lang;
+  document.cookie = 'googtrans='+v+';path=/';
+  document.cookie = 'googtrans='+v+';domain='+location.hostname+';path=/';
+  location.reload();
+}
+document.addEventListener('click', function(e){
+  var btn = e.target.closest('[data-lang-btn-x]');
+  var item = e.target.closest('[data-tr]');
+  if(item){ doTranslate(item.getAttribute('data-tr')); return; }
+  var menu = document.querySelector('.lang-menu');
+  if(btn){ if(menu) menu.classList.toggle('open'); return; }
+  if(menu && !e.target.closest('.lang-wrap')) menu.classList.remove('open');
+});
+function googleTranslateElementInit(){ new google.translate.TranslateElement({pageLanguage:'ar', includedLanguages:'ar,en,de,fr,tr,es,it,nl,ru,zh', autoDisplay:false}, 'google_translate_element'); }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div id="google_translate_element" style="display:none"></div>
+<div style="position:fixed;top:70px;left:10px;z-index:99999;">
+<button onclick="document.getElementById('myLangMenu').classList.toggle('open')" style="background:#0a1e3a;color:#fff;border:2px solid gold;padding:10px 14px;border-radius:25px;font-size:17px;cursor:pointer">🌐 🇪🇬 العربية ▼</button>
+<div id="myLangMenu" class="lang-menu2" style="display:none;background:#0a1e3a;border:1px solid gold;border-radius:12px;padding:8px;margin-top:6px;min-width:190px">
+<button onclick="doTranslate('ar')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇪🇬 العربية</button>
+<button onclick="doTranslate('en')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇬🇧 English</button>
+<button onclick="doTranslate('de')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇩🇪 Deutsch</button>
+<button onclick="doTranslate('fr')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇫🇷 Français</button>
+<button onclick="doTranslate('tr')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇹🇷 Türkçe</button>
+<button onclick="doTranslate('es')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇪🇸 Español</button>
+<button onclick="doTranslate('it')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇮🇹 Italiano</button>
+<button onclick="doTranslate('nl')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇳🇱 Nederlands</button>
+<button onclick="doTranslate('ru')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇷🇺 Русский</button>
+<button onclick="doTranslate('zh')" style="display:block;width:100%;text-align:right;background:#132f55;color:#fff;padding:10px;border-radius:10px;margin:3px 0;font-size:16px">🇨🇳 中文</button>
+</div></div>
+<style>.lang-menu2.open{display:block !important}</style>
+<script>
+function doTranslate(lang){ var v=lang==='ar'?'/auto/ar':'/auto/'+lang; document.cookie='googtrans='+v+';path=/'; location.reload(); }
+function googleTranslateElementInit(){ new google.translate.TranslateElement({pageLanguage:'ar', includedLanguages:'ar,en,de,fr,tr,es,it,nl,ru,zh', autoDisplay:false}, 'google_translate_element'); }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIX_TOP -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btns=[...document.querySelectorAll('.tbtn')];
+  var cards=[...document.querySelectorAll('a.card')];
+  var search=document.getElementById('searchBox');
+  var countEl=document.getElementById('searchCount');
+  var currentCat='All';
+
+  // اعمل زرار المسح لو مش موجود
+  var clearBtn=document.getElementById('clearSearch');
+  if(!clearBtn && search){
+    clearBtn=document.createElement('button');
+    clearBtn.id='clearSearch';
+    clearBtn.textContent='مسح ✕';
+    clearBtn.style.cssText='padding:14px 16px;border-radius:14px;border:1px solid #1e3a5f;background:#c0392b;color:#fff;font-size:15px;font-weight:bold;cursor:pointer;white-space:nowrap;';
+    // خلي البحث والزرار جنب بعض
+    var wrap=document.createElement('div');
+    wrap.style.cssText='display:flex;gap:8px;align-items:center;';
+    search.parentNode.insertBefore(wrap, search);
+    wrap.appendChild(search);
+    wrap.appendChild(clearBtn);
+    search.style.flex='1';
+  }
+
+  function applyFilters(){
+    var q=search?search.value.trim().toLowerCase():'';
+    var shown=0;
+    cards.forEach(function(c){
+      var ct=c.getAttribute('data-t');
+      var catOk=(currentCat==='All'||ct===currentCat);
+      var txt=c.textContent.toLowerCase();
+      var searchOk=(q===''||txt.includes(q));
+      var show=catOk&&searchOk;
+      c.style.display=show?'':'none';
+      if(show) shown++;
+    });
+    if(countEl) countEl.textContent = q?('النتيجة: '+shown+' درس'):'';
+    // اخفي زرار المسح لو البحث فاضي
+    if(clearBtn) clearBtn.style.display = q?'block':'none';
+  }
+
+  btns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault(); e.stopPropagation();
+      currentCat=btn.getAttribute('data-t');
+      btns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+      var g=document.querySelector('.lgrid'); if(g) g.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  if(search) search.addEventListener('input', applyFilters);
+  if(clearBtn){
+    clearBtn.addEventListener('click', function(){
+      search.value='';
+      search.focus();
+      applyFilters();
+    });
+  }
+  applyFilters();
+});
+</script>
+<!-- FIX_TOP_END -->
+</body></html>
