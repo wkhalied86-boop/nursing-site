@@ -1,0 +1,35 @@
+الأولية","First Aid"],["🧪","التحاليل الطبية","Lab Tests"],["😷","مكافحة العدوى","Infection Control"],["🍽️","التغذية العلاجية","Nutrition"],["💧","السوائل والمحاليل","Fluids"],["🛏️","رعاية المريض","Patient Care"],["📋","ملاحظات التمريض","Nursing Notes"],["🔬","التشريح","Anatomy"],["🫀","رسم القلب ECG","ECG"],["💤","النوم","Sleep"],["🧴","النظافة الشخصية","Hygiene"],["🦷","صحة الفم","Oral Care"],["👁️","العناية بالعين","Eye Care"],["🦶","العناية بالقدم","Foot Care"],["🏥","المستشفى","Hospital"],["📚","المصطلحات الطبية","Medical Terms"],["🩻","الأشعة","Radiology"],["🧬","الجهاز المناعي","Immune System"],["🍭","مرض السكري","Diabetes"],["🩸","ضغط الدم","Blood Pressure"],["🌡️","الحرارة","Fever"],["🤢","الجهاز الهضمي","Digestive"],["🧫","الميكروبات","Microbes"],["💪","العضلات","Muscles"],["👂","الأذن","Ear"],["🦠","الفيروسات","Viruses"],["🧍","صحة المرأة","Women Health"],["🧑‍⚕️","أخلاقيات التمريض","Nursing Ethics"],["🫘","الكلى","Kidney"],["🧂","الغدد الصماء","Endocrine"],["😮‍💨","الجهاز التنفسي","Respiratory"],["🧻","الجهاز البولي","Urinary"],["🩼","الكسور","Fractures"],["🧃","الفيتامينات","Vitamins"],["💊","المضادات الحيوية","Antibiotics"],["🩸","نقل الدم","Blood Transfusion"],["🚨","الطوارئ","Emergency"],["🧒","حديثي الولادة","Newborn"],["🤱","الرضاعة","Breastfeeding"],["🧠","الصحة النفسية","Mental Health"],["📈","التمريض الباطني","Medical Nursing"],["🔪","تمريض الجراحة","Surgical Nursing"],["🧯","الحروق","Burns"],["🩹","التقرحات","Ulcers"],["🧴","العناية بالبشرة","Skin Care"],["🦵","العلاج الطبيعي","Physiotherapy"],["🧑‍🦽","ذوي الاحتياجات","Special Needs"]
+];
+function li(){return LANGS.findIndex(function(x){return x[0]==CUR})}
+function render(){
+var q=document.getElementById('q').value.toLowerCase();
+var g=document.getElementById('grid');g.innerHTML="";
+for(var i=0;i<150;i++){
+var t=TOPICS[i%TOPICS.length];
+var lvl=Math.floor(i/TOPICS.length)+1;
+var name=(CUR=='ar'?t[1]:t[2]);
+var title=name+" "+lvl;
+if(q && title.toLowerCase().indexOf(q)==-1) continue;
+var d=document.createElement('div');d.className='card';
+d.innerHTML='<div class="e">'+t[0]+'</div><b>'+title+'</b><span>'+LANGS[li()][1]+' - قسم '+lvl+'</span>';
+d.onclick=(function(tt,ttl){return function(){
+document.getElementById('me').textContent=tt[0];
+document.getElementById('mt').textContent=ttl;
+document.getElementById('md').textContent=ttl+" - درس كامل في أكاديمية خالد للتمريض";
+document.getElementById('open').textContent=UI[CUR];
+document.getElementById('open').onclick=function(){window.open('https://www.google.com/search?q='+encodeURIComponent(ttl+' nursing lesson'),' _blank')};
+document.getElementById('m').style.display='flex';
+}})(t,title);
+g.appendChild(d);
+}}
+var lh=document.getElementById('langs');
+LANGS.forEach(function(l){
+var b=document.createElement('button');b.textContent=l[1];
+if(l[0]==CUR)b.className='on';
+b.onclick=function(){CUR=l[0];document.querySelectorAll('.langs button').forEach(function(x){x.className=''});b.className='on';render()};
+lh.appendChild(b);
+});
+document.getElementById('q').oninput=render;render();
+</script>
+</body>
+</html>
